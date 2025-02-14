@@ -1,0 +1,69 @@
+@charset "UTF-8";
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height:80vh;
+    margin: 0;
+    text-align: center;
+  }
+  
+.ID p {
+    font-size: 20px;
+    font-family: serif;
+}
+
+.idbox{
+    width:50vw;
+    height: 3vh;
+    align-items: center;
+    justify-content: center;
+    font-family: serif;
+    border-radius: 10px;
+    box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.3);
+}
+
+.PASS{
+    position: relative;
+}
+.PASS p {
+    font-size: 20px;
+    font-family: serif;
+    
+}
+
+.passbox{
+    width:50vw;
+    height: 3vh;
+    align-items: center;
+    justify-content: center;
+    font-family: serif;
+    border-radius: 10px;
+    box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.3);
+}
+
+#button{
+    width: 100px;
+    height: 30px;
+    border-radius: 5px;
+    box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.3);
+}
+#togglePassword{
+      position: absolute;
+      right: 10px;
+      top: 80%;
+      transform: translateY(-50%);
+      font-size: 18px;
+      color: #888;
+}
+#output1{
+    font-size: 10px;
+    color: red;
+}
+#output2{
+    font-size: 10px;
+    color: red;
+}
+
+
+

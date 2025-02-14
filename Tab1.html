@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="ja">
+    <head>
+        <meta charset="UTF-8">
+        <title>Tab1</title>
+    </head>
+    <style>
+        body{
+            text-align: center;
+            margin: 0;
+            justify-content: center;
+            align-items: center;
+        }
+    </style>
+    <body>
+        <p>ここはtab1です</p>
+        <input type='text' id="number" >
+        <button onclick="double()">send</button>
+        <p id="output" ></p>
+        <script>
+            async function double() {
+            let input = document.getElementById("number").value;
+            let output = document.getElementById("output");
+
+            // 入力が数値かどうかをチェック
+            if (isNaN(input) || input.trim() === "") {
+                alert('エラー: 数値を入力してください');
+                return;
+            }
+
+            let number = Number(input);
+            try{
+                response= await fetch('http://192.168.0.30:5000/calculate',{
+                    method:"POST",
+                    headers:{
+                        'Content-type':'application/json'
+                    },
+                    body:JSON.stringify({number:number})
+                });
+                let data = await response.json();
+
+                if (data.error) {
+                    output.innerText = `エラー: ${data.error}`;
+                } else {
+                    output.innerText = `結果: ${data.result}`;
+                }
+            } catch (error) {
+                output.innerText = '通信エラーが発生しました';
+                console.error('Error:', error);
+            }
+
+        }
+        </script>
+    </body>
+</html>
