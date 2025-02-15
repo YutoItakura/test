@@ -15,7 +15,7 @@ body {
 
 .idbox{
     width:50vw;
-    height: 3vh;
+    height: 6vh;
     align-items: center;
     justify-content: center;
     font-family: serif;
@@ -34,7 +34,7 @@ body {
 
 .passbox{
     width:50vw;
-    height: 3vh;
+    height: 6vh;
     align-items: center;
     justify-content: center;
     font-family: serif;
@@ -64,6 +64,4 @@ body {
     font-size: 10px;
     color: red;
 }
-
-
 
